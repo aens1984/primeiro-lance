@@ -1,0 +1,24 @@
+#bottomDock{position:fixed;z-index:60;bottom:0;left:0;right:0;background:#16271f;border-top:1px solid #40543e;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding:6px 5px calc(6px + env(safe-area-inset-bottom));gap:3px}
+#bottomDock button{border:0;background:transparent;color:#b9cabc;font:600 11px 'Segoe UI',sans-serif;border-radius:10px;min-height:54px;padding:5px 2px;display:grid;justify-items:center;align-content:center;gap:3px;cursor:pointer}
+#bottomDock button span{font-size:22px;line-height:24px;color:#c5df8d}#bottomDock button[aria-expanded=true]{background:#324730;color:#e4f4c6}
+#bottomOverlay{position:fixed;inset:0 0 calc(67px + env(safe-area-inset-bottom));z-index:59;background:#0008;display:flex;align-items:flex-end}
+#bottomSheet{width:100%;max-height:94%;background:#14231b;border:1px solid #4c6544;border-bottom:0;border-radius:22px 22px 0 0;display:flex;flex-direction:column;box-shadow:0 -10px 50px #0006;overflow:hidden}
+.bottom-heading{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:1px solid #344b36;flex:none}.bottom-heading h2{margin:0;font-size:21px}.bottom-heading button{background:#2c4031;border:1px solid #52644e;color:#e8ede8;border-radius:50%;height:40px;width:40px;font-size:18px;cursor:pointer}
+#bottomPages{overflow-y:auto;overscroll-behavior:contain;padding:16px 14px 24px;scrollbar-width:thin;min-height:0}.bottom-page>.action{margin:0 8px 12px 0}.bottom-page .card{padding:16px;margin-bottom:12px}.bottom-page #bookPanel{margin-top:0}.bottom-page #bookTab{display:none}.bottom-game-tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}.bottom-game-tabs button{font-size:12px;padding:10px}.bottom-game-tabs [aria-pressed=true]{background:#c5df8d;color:#18251b}.bottom-page #history{max-height:40dvh}.bottom-page #export{margin:12px 0}.bottom-page .book-tools{grid-template-columns:1fr}.bottom-panel-open{overflow:hidden}
+@media(max-width:780px){
+ body.bottom-navigation{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
+ .bottom-navigation>header{padding:10px 14px}.bottom-navigation .brand{font-size:20px}.bottom-navigation header .pill{font-size:8px;padding:6px}
+ .bottom-navigation>main:not(#preferencesPage){padding:8px 12px 12px}.bottom-navigation>main>h1,.bottom-navigation>main>p,.bottom-navigation>footer{display:none}
+ .bottom-navigation .layout{display:block;margin:0}.bottom-navigation .layout>aside{display:none}.bottom-navigation .layout>section{width:100%;--layout-board-size:100%!important}
+ .bottom-navigation .board-session{width:100%}.bottom-navigation .board-toolbar{margin:0;min-height:40px}.bottom-navigation #editLayout{display:none}.bottom-navigation .sound-control{font-size:11px}
+ .bottom-navigation .view-switch{margin:0 0 7px}.bottom-navigation .view-switch button{padding:7px 5px;font-size:12px}
+ .bottom-navigation .board-wrap{width:100%;max-width:max(200px,calc(100dvh - 302px));margin:auto;padding:7px;border-radius:12px}.bottom-navigation .board-foot{font-size:10px;padding-top:8px;gap:6px}
+ .bottom-navigation #status{margin:7px 0;font-size:12px;line-height:1.4;min-height:17px}.bottom-navigation #layoutGameActions{justify-content:center;gap:8px}.bottom-navigation #layoutGameActions button{padding:9px 12px;font-size:12px;min-height:38px}
+ .bottom-navigation #boardPgnNav{max-width:390px;margin:5px auto}.bottom-navigation #boardPgnNav button{padding:6px}.bottom-navigation .sq{font-size:clamp(22px,8vw,55px)}
+ .bottom-navigation #viewMessage{font-size:10px;margin:3px 0;line-height:1.3}
+ .bottom-navigation .board-wrap.in-3d{max-width:max(160px,calc(100dvh - 412px))}
+ .bottom-navigation #tools3d{display:grid;grid-template-columns:minmax(0,1fr) 76px;gap:6px 10px;max-width:390px;margin:8px auto 0;padding:8px}
+ .bottom-navigation #tools3d .camera-buttons{grid-column:2;grid-row:1 / 3}.bottom-navigation #tools3d .camera-buttons button{font-size:11px;padding:6px;line-height:1.3}
+ .bottom-navigation #tools3d label{grid-column:1;display:grid;grid-template-columns:65px minmax(0,1fr);gap:6px;margin:0;font-size:12px;min-height:24px}
+ .bottom-navigation #tools3d input{margin:0}.bottom-navigation #help3d{display:none}
+}

@@ -1,0 +1,15 @@
+const fs=require('fs');
+const lib=fs.readFileSync('work/chess.cjs','utf8');
+const license=fs.readFileSync('work/chess-LICENSE.txt','utf8');
+let html=fs.readFileSync('work/template.html','utf8').replace('/*CHESS_LIBRARY*/',lib).replace('/*LICENSE*/',license);
+for(const [tag,file] of Object.entries({PDFLIB:'pdf.js',PDFWORKER:'pdf-worker.js',OCRLIB:'tesseract.js',OCRWORKER:'tesseract-worker.js',OCRCORE:'tesseract-core.wasm.js',OCRLANG:'eng.traineddata.gz'}))html=html.replace('/*'+tag+'*/',()=>fs.readFileSync('work/'+file).toString('base64'));
+html=html.replace('/*PDFLICENSE*/',()=>fs.readFileSync('work/pdf-LICENSE.txt','utf8')).replace('/*OCRLICENSE*/',()=>fs.readFileSync('work/tesseract-LICENSE.txt','utf8'));
+html=html.replace('/*LIBRARY_UI*/',()=>fs.readFileSync('work/library-ui.js','utf8'));
+html=html.replace('/*BOARD_3D*/',()=>fs.readFileSync('work/board-3d.js','utf8'));
+html=html.replace('/*PREFERENCES*/',()=>fs.readFileSync('work/preferences.js','utf8'));
+html=html.replace('/*BOARD_MOTION*/',()=>fs.readFileSync('work/board-motion.js','utf8'));
+html=html.replace('/*BOARD_SOUND*/',()=>fs.readFileSync('work/board-sound.js','utf8').replace('/*PIECE_SOUND_WAV*/',()=>fs.readFileSync('work/board-sound.wav').toString('base64')));
+html=html.replace('/*LAYOUT_EDITOR*/',()=>fs.readFileSync('work/layout-editor.js','utf8').replace('/*LAYOUT_EDITOR_CSS*/',()=>fs.readFileSync('work/layout-editor.css','utf8')));
+html=html.replace('/*BOTTOM_MENU*/',()=>fs.readFileSync('work/bottom-menu.js','utf8').replace('/*BOTTOM_MENU_CSS*/',()=>fs.readFileSync('work/bottom-menu.css','utf8')));
+fs.writeFileSync('outputs/Treinador-de-Xadrez.html',html);
+console.log('Treinador criado: '+html.length+' caracteres');
