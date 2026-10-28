@@ -4,7 +4,7 @@
 
 Treinador de xadrez em português do Brasil, com tabuleiro 2D/3D, motor Stockfish local e ferramentas para estudar partidas e livros.
 
-[**Baixar o aplicativo Android**](https://github.com/aens1984/primeiro-lance/releases/latest) · [Instalação](#instalação-no-android) · [Compilação](docs/COMPILAR.md) · [Licenças](THIRD_PARTY.md)
+[**Baixar o aplicativo Android**](https://github.com/aens1984/primeiro-lance/releases/tag/v1.1.1) · [Instalação](#instalação-no-android) · [Compilação](docs/COMPILAR.md) · [Licenças](THIRD_PARTY.md)
 
 <p align="center">
   <img src="docs/imagens/tabuleiro-2d.png" alt="Tabuleiro 2D e menu inferior do Primeiro Lance" width="300">
