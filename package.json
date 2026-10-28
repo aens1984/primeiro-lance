@@ -1,0 +1,14 @@
+{
+  "name": "primeiro-lance",
+  "version": "1.1.1",
+  "private": true,
+  "description": "Treinador de xadrez em português com Stockfish local e tabuleiro 2D/3D",
+  "license": "GPL-3.0-only",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node work/build.cjs",
+    "prepare:android": "node work/android/build-web.cjs"
+  }
+}
