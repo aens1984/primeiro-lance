@@ -1,0 +1,81 @@
+PRIMEIRO LANCE - ANDROID INDEPENDENTE
+Preparado para Galaxy S25 (SM-S931B/DS), Android 16, ARM64.
+
+ESTADO DESTA ENTREGA
+Versão 1.1.1 (código 16): menu inferior com Jogar, Treinar, Partidas,
+Análise e Ajustes. Abra um painel para acessar seus recursos; feche no X,
+no botão Voltar ou tocando fora dele. A posição é preservada ao navegar.
+No celular deitado, o tabuleiro continua ampliado com lances ao lado.
+Na posição vertical, as barras de giro e inclinação e Restaurar visão
+aparecem logo abaixo do tabuleiro ao selecionar 3D.
+
+Os fontes e o gerador estão preparados. Quando Primeiro-Lance.apk e
+Compilacao.txt estiverem presentes, a compilação e a assinatura foram
+verificadas; confira a data e o hash em Compilacao.txt.
+A instalação e o funcionamento em um Android físico ainda precisam ser
+confirmados. Os resultados das verificações ficam em Verificacao.txt.
+Se o APK já estiver nesta pasta, pode instalá-lo diretamente; não é preciso gerar novamente.
+
+COMO GERAR O APK
+1. No notebook com internet, dê dois cliques em "Gerar APK.cmd".
+2. Na primeira execução, leia a licença do Android SDK exibida pela ferramenta.
+   Aceite somente se concordar. Nenhuma execução como administrador é necessária.
+3. Aguarde os downloads e a compilação. Pode levar vários minutos e usar
+   vários GB de espaço para ferramentas e arquivos de trabalho.
+4. Só após todas as verificações de compilação e assinatura passarem,
+   será criado "Primeiro-Lance.apk" nesta pasta.
+
+COMO INSTALAR
+Transfira o APK ao celular por USB ou por um meio de sua escolha.
+No celular, abra o arquivo e autorize a instalação para o aplicativo usado
+para abri-lo, caso o Android solicite. Depois procure "Primeiro Lance".
+Não é necessário publicar na Play Store, instalar Termux ou manter o notebook ligado.
+
+COMO CONFERIR A PRIMEIRA VERSÃO
+1. Confira se aparece "Stockfish ... conectado · local neste celular".
+   Se aparecer "adversário básico", o motor completo não está funcionando.
+2. Jogue e4, aguarde análise e resposta. Teste uma dica e a revisão completa.
+3. Abra Biblioteca e estude os exemplos. Marque uma favorita.
+4. Importe PGN/FEN, um PDF com texto e uma imagem para OCR. Confira a transcrição.
+5. Teste o tabuleiro 3D e a alternância para 2D. Teste girar a tela.
+6. Salve uma partida e um backup em uma pasta sua. Feche e reabra o app.
+7. Ative o modo avião e repita partida, análise e leitura de uma coleção salva.
+8. Com internet, atualize PGN Mentor/TWIC e baixe uma coleção.
+
+DADOS
+Biblioteca, favoritos, notas, exercícios e preferências ficam neste aplicativo.
+A instalação não copia automaticamente a biblioteca do notebook.
+A exportação de uma partida usa o seletor de arquivos do Android.
+O backup guarda os estudos locais. Restaurar adiciona coleções, une favoritos
+e substitui as preferências e a sessão pelas do backup.
+Desinstalar apaga os dados locais; guarde backups fora do aplicativo.
+Não há sincronização automática entre notebook e celular.
+
+FORÇA E LIMITES
+Dicas e análises usam força completa do Stockfish, com tempo limitado de busca.
+Os níveis avançados configuram os alvos nominais 2000, 2200 e 2500.
+A velocidade depende do aparelho e da temperatura. A nota e o rating são
+experimentais, não equivalem a ratings humanos oficiais. OCR exige revisão.
+PGN acompanha a linha principal. Coleções: até 24 MB e 40 mil partidas.
+O aplicativo usa uma thread e 32 MB de hash para o motor.
+
+ATUALIZAÇÕES E ASSINATURA
+Conserve a pasta fontes/.signing em local privado e faça backup dela.
+Ela será criada na primeira compilação e contém a chave usada para atualizar
+o aplicativo sem precisar desinstalar. Não publique essa pasta ou sua senha.
+O gerador não inclui a chave em arquivos de distribuição.
+
+FONTES E LICENÇAS
+A interface e a integração Android são fornecidas sob GPLv3.
+Stockfish 19: https://stockfishchess.org/download/
+Código correspondente: https://github.com/official-stockfish/Stockfish/tree/sf_19
+Se o motor oficial não tiver alinhamento de 16 KB, o gerador recompila os
+fontes oficiais com NDK r28c e a rede NNUE original, verificando sua integridade.
+Na compilação, o gerador guarda os fontes exatos do motor, sua rede
+e licença junto ao APK, e cria um ZIP com os fontes da interface/integração.
+chess.js, PDF.js e Tesseract conservam as licenças incorporadas à interface.
+Os fontes preparados ficam em fontes/. Dados privados do notebook não são
+incluídos. Não redistribua o APK sem seus fontes e licenças correspondentes.
+
+EDITAR O LAYOUT
+Abra Editar layout ao lado da engrenagem. Escolha Celular ou Notebook, mova os quadros pelas setas ou arrastando e confira a prévia. Salvar e voltar guarda a disposição; Cancelar descarta a edição. Restaurar layout original só confirma depois de salvar. Baixar layouts e Importar layouts permitem levar a disposição para outro aparelho; não há sincronização automática.
